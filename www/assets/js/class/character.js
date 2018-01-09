@@ -6,18 +6,32 @@ class Character {
         this.stamina = stamina;
         this.money = money;
         this.isAlive = true;
+        this.action = 10;
     }
 
     attack(char2) {
-        char2.health -= this.strength;
-        if (char2.health <= 0) {
-            char2.health = 0;
-            char2.isDead();
+        if (this.isAlive) {
+            char2.health -= this.strength;
+
+            if (char2.health <= 0) {
+                char2.health = 0;
+                char2.isDead();
+            }
+
+            return char2.health;
+        } else {
+            return this.name + " is dead";
         }
-        return char2.health;
+
+
     }
 
     isDead() {
         this.isAlive = false;
     }
+
+    // sleep() {
+    //     this.action = 10;
+
+    // }
 }
