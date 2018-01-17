@@ -1,0 +1,76 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+// Start page
+#start-page{
+    #start-background {
+        background-image: url("../images/start.jpg");
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-size: 100% 100%;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+    }
+
+    #play-container {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    
+        #play {
+            width: 150px;
+            cursor: pointer;
+            animation-name: "remove";
+        }
+    }
+}
+// End start page
+
+// Remove start page
+.remove-background {
+    opacity: 0;
+    transition: all 2s;
+    animation-name: remove;
+    animation-delay: 2s;
+}
+
+@keyframes remove {
+    from {display: block;}
+    to {display: none;}
+}
+// End remove start page
+
+
+// House page
+#house {
+    #house-background {
+        background-image: url("../images/kirby_house.png");
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-size: cover;
+        width: 100%;
+        height: 100%;
+        z-index: -2;
+    }
+    
+    .content {
+        display: none;
+
+        .bub1 {
+            display: absolute;
+            top: 200px;
+            left: 500px;
+        }
+
+        .kirby {
+            width: 150px;
+        }
+    }
+}
+// End house page

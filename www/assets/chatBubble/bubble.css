@@ -14,7 +14,7 @@ body{
       background-color: lightyellow;
   }
   .border{
-    border: 8px solid #666;
+    border: 8px solid pink;
   }
   .round{
     border-radius: 30px;
@@ -34,7 +34,7 @@ body{
     top: -8px;
       bottom: auto;
       border: 32px solid;
-      border-color: #666 transparent transparent transparent;
+      border-color: pink transparent transparent transparent;
   }
   .tri-right.left-top:after{
       content: ' ';
@@ -60,7 +60,7 @@ body{
     top: 30px;
       bottom: auto;
       border: 20px solid;
-      border-color: #666 #666 transparent transparent;
+      border-color: pink transparent transparent;
   }
   .tri-right.left-in:after{
       content: ' ';
@@ -86,7 +86,7 @@ body{
     top: auto;
       bottom: -40px;
       border: 32px solid;
-      border-color: transparent transparent transparent #666;
+      border-color: transparent transparent transparent pink;
   }
   .tri-right.btm-left:after{
       content: ' ';
@@ -112,7 +112,7 @@ body{
     top: auto;
       bottom: -40px;
       border: 20px solid;
-      border-color: #666 transparent transparent #666;
+      border-color:pink transparent transparent pink;
   }
   .tri-right.btm-left-in:after{
       content: ' ';
@@ -137,7 +137,7 @@ body{
       right: 30px;
       bottom: -40px;
       border: 20px solid;
-      border-color: #666 #666 transparent transparent;
+      border-color: pink pink transparent transparent;
   }
   .tri-right.btm-right-in:after{
       content: ' ';
@@ -156,7 +156,7 @@ body{
     top: auto;
       bottom: -40px;
       border: 32px solid;
-      border-color: transparent transparent transparent #666;
+      border-color: transparent transparent transparent pink;
       left: 0px;
     right: auto;
     top: auto;
@@ -174,7 +174,7 @@ body{
       right: -8px;
       bottom: -40px;
       border: 20px solid;
-      border-color: #666 #666 transparent transparent;
+      border-color: pink pink transparent transparent;
   }
   .tri-right.btm-right:after{
       content: ' ';
@@ -199,7 +199,7 @@ body{
     top: 30px;
       bottom: auto;
       border: 20px solid;
-      border-color: #666 transparent transparent #666;
+      border-color: pink transparent transparent pink;
   }
   .tri-right.right-in:after{
       content: ' ';
@@ -225,7 +225,7 @@ body{
     top: -8px;
       bottom: auto;
       border: 32px solid;
-      border-color: #666 transparent transparent transparent;
+      border-color: pink transparent transparent transparent;
   }
   .tri-right.right-top:after{
       content: ' ';
