@@ -59,12 +59,15 @@ body {
 }
 
 #house .content .bub1 {
-  display: relative;
-  top: 200px;
-  left: 500px;
+  position: absolute;
+  top: 180px;
+  left: 520px;
 }
 
 #house .content .kirby {
   width: 150px;
+  position: absolute;
+  top: 340px;
+  left: 680px;
 }
 /*# sourceMappingURL=style.css.map */
