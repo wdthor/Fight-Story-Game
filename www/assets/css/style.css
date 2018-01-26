@@ -1,6 +1,19 @@
 body {
+  background-color: teal;
   margin: 0;
   padding: 0;
+}
+
+.hide-section {
+  display: none;
+}
+
+.listBtn {
+  list-style: none;
+}
+
+.listBtn li:hover {
+  cursor: pointer;
 }
 
 #start-page #start-background {
@@ -43,31 +56,65 @@ body {
   }
 }
 
+.kirby {
+  width: 150px;
+  position: absolute;
+  top: 340px;
+  left: 680px;
+}
+
+.kirby-fight {
+  background-image: url("../sprites/kirby2.png");
+  width: 70.45px;
+  height: 46px;
+  animation: yo 1.5s 1 steps(9);
+}
+
+@keyframes yo {
+  from {
+    background-position-x: 0px;
+  }
+  to {
+    background-position-x: -634px;
+  }
+}
+
 #house #house-background {
   background-image: url("../images/kirby_house.png");
   position: absolute;
   top: 0;
   left: 0;
-  background-size: cover;
+  background-size: 100% 100%;
   width: 100%;
   height: 100%;
   z-index: -2;
 }
 
-#house .content {
-  display: none;
-}
-
-#house .content .bub1 {
+#house .bub1 {
   position: absolute;
   top: 180px;
   left: 520px;
 }
 
-#house .content .kirby {
-  width: 150px;
+#arena-background {
+  background-image: url("../images/arena.jpg");
   position: absolute;
-  top: 340px;
-  left: 680px;
+  top: 0;
+  left: 0;
+  background-size: 100% 100%;
+  width: 100%;
+  height: 100%;
+  z-index: -3;
+}
+
+#shop-background {
+  background-image: url("../images/shop.jpg");
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-size: 100% 100%;
+  width: 100%;
+  height: 100%;
+  z-index: -4;
 }
 /*# sourceMappingURL=style.css.map */

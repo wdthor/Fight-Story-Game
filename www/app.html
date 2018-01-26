@@ -2,51 +2,73 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Fight Story Game</title>
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/chatBubble/bubble.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Fight Story Game</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/chatBubble/bubble.css">
 </head>
 
 <body>
-
-
-    <div id="start-page">
-        <div id="start-background"></div>
-        <section id="play-container">
-            <img id="play" src="assets/images/start-btn.png" alt="start button">
-        </section>
-    </div>
-
-    <section id="house">
-        <div id="house-background"></div>
-        <!-- All house contents -->
-        <div class="content">
-            <nav class="menu">
-                <ul class="listBtn">
-                    <li><a href="">Home</a></li>
-                    <li><a href="">Arena</a></li>
-                    <li><a href="">Shop</a></li>
-                </ul>
-
-            </nav>
-            <!-- Text bubble -->
-            <div class="bub1 talk-bubble tri-right border round btm-right-in">
-                <div class="bub1-txt1 talktext">
-                    <p>Salut, je m'appelle Kirby</p>
-                </div>
-            </div>
-            <img class="kirby" src="assets/images/kirby_hi.gif" alt="">
-        </div>
-
+  <section id="start-page">
+    <div id="start-background"></div>
+    <section id="play-container">
+      <img id="play" src="assets/images/start-btn.png" alt="start button">
     </section>
+  </section>
+  <nav class="menu hide-section">
+    <ul class="listBtn">
+      <li class="home-link">
+        Home
+      </li>
+      <li class="arena-link">
+        Arena
+      </li>
+      <li class="shop-link">
+        Shop
+      </li>
+    </ul>
+  </nav>
+  
+  <!-- House Section -->
+  <section id="house" class="hide-section">
+    <div id="house-background"></div>
+    <!-- All house contents -->
+    <div class="content-house hide-section">
 
+      <!-- Text bubble -->
+      <div class="bub1 talk-bubble tri-right border round btm-right-in">
+        <div class="bub1-txt1 talktext">
+          <p class="dial-home"></p>
+        </div>
+      </div>
+      <img class="kirby" src="assets/images/kirby_hi.gif" alt="">
+    </div>
+  </section>
+  <!-- End House Section -->
 
-    <script type="text/javascript" src="assets/js/class/character.js"></script>
-    <script type="text/javascript" src="assets/js/class/day.js"></script>
-    <script type="text/javascript" src="assets/js/script.js"></script>
+  <!-- Arena Section -->
+  <section id="arena" class="hide-section">
+    <div id="arena-background"></div>
+
+    <div class="content-arena">
+      <div class="kirby-fight"></div>
+    </div>
+  </section>
+
+  <!-- Shop Section -->
+  <section id="shop" class="hide-section">
+    <div id="shop-background"></div>
+
+    <div class="content-shop">
+      <h1>Test Shop</h1>
+    </div>
+  </section>
+
+  <script type="text/javascript" src="assets/js/class/character.js"></script>
+  <script type="text/javascript" src="assets/js/class/day.js"></script>
+  <script type="text/javascript" src="assets/js/script.js"></script>
 </body>
 
 </html>

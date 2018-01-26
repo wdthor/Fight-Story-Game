@@ -1,19 +1,35 @@
 body {
+    background-color: teal;
     margin: 0;
     padding: 0;
+}
+
+.hide-section {
+    display: none;
+}
+
+@mixin change-background($imageLink, $zIndex) {
+    background-image: url($imageLink);
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-size: 100% 100%;
+    width: 100%;
+    height: 100%;
+    z-index: $zIndex;
+}
+.listBtn{
+  list-style: none;
+}
+
+.listBtn li:hover {
+  cursor: pointer;
 }
 
 // Start page
 #start-page{
     #start-background {
-        background-image: url("../images/start.jpg");
-        position: absolute;
-        top: 0;
-        left: 0;
-        background-size: 100% 100%;
-        width: 100%;
-        height: 100%;
-        z-index: -1;
+        @include change-background("../images/start.jpg", -1);
     }
 
     #play-container {
@@ -31,7 +47,7 @@ body {
 }
 // End start page
 
-// Remove start page
+// Remove start section
 .remove-background {
     opacity: 0;
     transition: all 2s;
@@ -45,35 +61,67 @@ body {
 }
 // End remove start page
 
+.kirby {
+    width: 150px;
+    position: absolute;
+    top: 340px;
+    left: 680px;
+}
+
+.kirby-fight {
+    background-image: url("../sprites/kirby2.png");
+    width: 70.45px;
+    height: 46px;
+    animation: yo 1.5s 1 steps(9);
+
+}
+
+@keyframes yo {
+   from {
+       background-position-x: 0px;
+   }
+   to {
+        background-position-x: -634px;
+   }
+}
+
+
+
+
+
+// TEST
+
+// @keyframes translate {
+//     to {
+//         left: 90%;
+//     }
+// }
+
+// END TEST
 
 // House page
 #house {
     #house-background {
-        background-image: url("../images/kirby_house.png");
-        position: absolute;
-        top: 0;
-        left: 0;
-        background-size: cover;
-        width: 100%;
-        height: 100%;
-        z-index: -2;
+        @include change-background("../images/kirby_house.png", -2);
     }
     
-    .content {
-        display: none;
-
-        .bub1 {
-            position: absolute;
-            top: 180px;
-            left: 520px;
-        }
-
-        .kirby {
-            width: 150px;
-            position: absolute;
-            top: 340px;
-            left: 680px;
-        }
-    }
+    .bub1 {
+        position: absolute;
+        top: 180px;
+        left: 520px;
+      }
 }
+
 // End house page
+
+// Arena Page
+#arena-background {
+    @include change-background("../images/arena.jpg", -3);
+}
+// End Arena Page
+
+// Shop Page
+#shop-background {
+    @include change-background("../images/shop.jpg", -4);
+}
+// End Shop Page

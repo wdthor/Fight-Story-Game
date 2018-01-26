@@ -7,7 +7,19 @@ class Character {
         this.isAlive = true;
         this.action = 10;
         this.sleep = false;
+
+        this.dialogue = {
+            home: {
+                intro: ["Hi, my name is Kirby",
+                    "This is my house, where I take a nap.",
+                    "Click on 'Arena' to make me fight.",
+                    "Click on 'Shop' to buy me some treats."
+                ]
+            }
+        }
     }
+
+
 
     isSleeping(days) {
         if (this.sleep === false) {
@@ -28,7 +40,7 @@ class Character {
             }
 
             if (this.action === 3) {
-                console.log (this.name + " is tired, you should go to sleep.");
+                console.log(this.name + " is tired, you should go to sleep.");
             }
 
             return char2.health;
