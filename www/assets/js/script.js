@@ -5,7 +5,7 @@ let startBtn = document.querySelector("#play");
 let startPage = document.querySelector("#start-page");
 
 // Menu
-let menu = document.querySelector(".menu");
+let menu = document.querySelector(".main-menu");
 let homeLink = document.querySelector(".home-link");
 let arenaLink = document.querySelector(".arena-link");
 let shopLink = document.querySelector(".shop-link");
