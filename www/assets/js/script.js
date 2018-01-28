@@ -27,7 +27,7 @@ let contentShop = document.querySelector(".content-shop");
 
 
 let kirby = new Character("Kirby", 100, 20);
-console.log(kirby.dialogue.home.intro[0]);
+// console.log(kirby.dialogue.home.intro[0]);
 
 // START PAGE
 startBtn.addEventListener("click", function () {
