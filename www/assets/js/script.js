@@ -21,6 +21,19 @@ let bub1 = document.querySelector(".bub1");
 let arenaSection = document.querySelector("#arena");
 let contentArena = document.querySelector(".content-arena");
 
+// Fight Scene
+let metalKnightScene = document.querySelector(".metal-knight-scene");
+let num1 = document.querySelector(".num1");
+let num2 = document.querySelector(".num2");
+let answer = document.querySelector("#answer");
+
+let randomNum1 = Math.floor(Math.random() * 10 + 1);
+let randomNum2 = Math.floor(Math.random() * 10 + 1);
+let total = randomNum1 + randomNum2;
+
+num1.textContent = randomNum1;
+num2.textContent = randomNum2;
+
 // Shop Section
 let shopSection = document.querySelector("#shop");
 let contentShop = document.querySelector(".content-shop");
@@ -44,7 +57,7 @@ startBtn.addEventListener("click", function () {
 // END START PAGE
 
 // HOME
-homeLink.addEventListener("click", function(){
+homeLink.addEventListener("click", function () {
   displayBackground(houseSection);
 })
 // END HOME
@@ -55,6 +68,22 @@ arenaLink.addEventListener("click", function () {
 
   displayBackground(arenaSection);
 
+});
+
+// FIGHT SCENES
+
+// Metal Knight Scene
+
+document.addEventListener("submit", function (event) {
+  event.preventDefault();
+  if (parseInt(answer.value) === total) {
+    randomNum1 = Math.floor(Math.random() * 10 + 1);
+    randomNum2 = Math.floor(Math.random() * 10 + 1);
+    num1.textContent = randomNum1;
+    num2.textContent = randomNum2;
+  } else {
+    console.log("wrong");
+  }
 });
 // END ARENA
 

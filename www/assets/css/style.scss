@@ -5,6 +5,10 @@ body {
     margin-right: 1px;
 }
 
+p {
+    margin: 4px 0;
+}
+
 .main-menu {
   display: flex;
 }
@@ -24,7 +28,15 @@ body {
     z-index: $zIndex;
 }
 
-
+.king-dedede {
+  -moz-transform: scaleX(-1);
+        -o-transform: scaleX(-1);
+        -webkit-transform: scaleX(-1);
+        transform: scaleX(-1);
+        filter: FlipH;
+        -ms-filter: "FlipH";
+  width: 200px;
+}
 
 ul {
   list-style: none; 
@@ -109,6 +121,9 @@ ul {
 
 .kirby-fight {
     background-image: url("../sprites/kirby2.png");
+    position: absolute;
+    top: 320px;
+    left: 70px;
     width: 70.45px;
     height: 46px;
     animation: yo 1.5s 1 steps(9);
@@ -159,15 +174,78 @@ ul {
 #arena-background {
     @include change-background("../images/arena.jpg", -3);
 }
-#metal-knight:hover {
-  cursor: pointer;
-  opacity: 1;
-}
+
 #metal-knight {
-  width: 250px;
+  background-image: url("../images/foe.png");
+  position: absolute;
+  top: 300px;
+  left: 700px;
+  background-size: 200px 100%;
+  background-position: center;
+  height: 100px;
+  width: 100px;
   border: 5px solid lightgray;
-  background-color: rgba(0,0,0,0.5);
+  background-color: rgba(0,0,0,0.7);
   opacity: 0.95;
+}
+
+#metal-knight:hover {
+    cursor: pointer;
+    opacity: 1;
+}
+
+.metal-knight-scene {
+    display: flex;
+}
+
+.metal-knight-scene input {
+    
+}
+
+#king-dedede {
+    background-image: url("../images/king-dedede.png");
+    background-size: 100%;
+    background-position: center;
+    height: 200px;
+    width: 207px;
+    position: absolute;
+    top: 95px;
+    left: 700px;
+    border: 5px solid lightgray;
+    background-color: rgba(0,0,0,0.7);
+    opacity: 0.95;
+}
+
+#king-dedede:hover {
+    cursor: pointer;
+    opacity: 1;
+}
+
+#whispy-woods {
+    background-image: url("../images/whispy-woods.png");
+    background-size: 100%;
+    background-position: center;
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    top: 300px;
+    left: 807px;
+    border: 5px solid lightgray;
+    background-color: rgba(0,0,0,0.7);
+    opacity: 0.95;
+}
+#whispy-woods:hover {
+    cursor: pointer;
+    opacity: 1;
+}
+.fight-scene {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: blue;
+    height: 100px;
+    width: 100%;
+    border-top: 2px solid red;
 }
 // End Arena Page
 
