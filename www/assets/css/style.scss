@@ -45,7 +45,7 @@ ul {
   border-bottom-left-radius: 35px;
   border: 1px solid salmon;
   border-right: none;
-  color: aquamarine;
+  color: #111;
 }
 
 .list-btn li {
@@ -148,6 +148,8 @@ ul {
         position: absolute;
         top: 180px;
         left: 520px;
+        width: 200px;
+        text-align: justify;
       }
 }
 
@@ -156,6 +158,16 @@ ul {
 // Arena Page
 #arena-background {
     @include change-background("../images/arena.jpg", -3);
+}
+#metal-knight:hover {
+  cursor: pointer;
+  opacity: 1;
+}
+#metal-knight {
+  width: 250px;
+  border: 5px solid lightgray;
+  background-color: rgba(0,0,0,0.5);
+  opacity: 0.95;
 }
 // End Arena Page
 
