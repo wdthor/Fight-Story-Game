@@ -123,11 +123,14 @@ ul {
     background-image: url("../sprites/kirby2.png");
     position: absolute;
     top: 320px;
-    left: 70px;
+    left: 360px;
     width: 70.45px;
     height: 46px;
-    // animation: kirby-atk 1.5s 1 steps(9);
+    animation: 1.5s 1 steps(9);
+}
 
+.kirby-anime {
+    animation-name: kirby-atk;
 }
 
 @keyframes kirby-atk {
@@ -143,13 +146,17 @@ ul {
   background-image: url("../sprites/knight-attack.png");
     position: absolute;
     background-position-x: 158px;
-    top: 320px;
-    left: 70px;
+    top: 325px;
+    left: 500px;
     width: 158.5px;
     height: 58px;
     // 617 / 4 = 154.25
-    animation: knight-atk 1.5s infinite steps(4), translate 1.5s infinite;
+    animation: 1.5s 1 steps(4);
     // animation: translate 1.5s infinite;
+}
+
+.knight-anime {
+    animation-name: knight-atk;
 }
 
 @keyframes knight-atk {
@@ -157,17 +164,17 @@ ul {
       background-position-x: 154px;
   }
   to {
-       background-position-x: 0px;
+       background-position-x: -463px;
   }
 }
 
 // TEST
 
-@keyframes translate {
-    to {
-        left: -1%;
-    }
-}
+// @keyframes translate {
+//     to {
+//         left: -1%;
+//     }
+// }
 
 // END TEST
 
@@ -214,6 +221,11 @@ ul {
 
 .metal-knight-scene {
     display: flex;
+    margin: 5px;
+}
+
+.metal-knight-scene p {
+    margin: 0 5px;
 }
 
 .metal-knight-scene input {
@@ -264,6 +276,7 @@ ul {
     height: 100px;
     width: 100%;
     border-top: 2px solid red;
+    
 }
 // End Arena Page
 

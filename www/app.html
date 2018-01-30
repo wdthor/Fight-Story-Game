@@ -12,27 +12,34 @@
 
 <body>
 
-
   <!-- Arena Section -->
   <section id="arena" class="">
     <div id="arena-background"></div>
 
     <div class="content-arena">
-      <div class="kirby-fight"></div>
-      <div class="knight-fight"></div>
-      <div id="metal-knight"></div>
-      <div id="whispy-woods"></div>
-      <div id="king-dedede" class="hide-section"></div>
-      <!-- <img src="assets/images/foe_sprites.png" alt=""> -->
+      <div class="fighters">
+        <div class="kirby-fight"></div>
+        <div class="knight-fight"></div>
+      </div>
+
+      <div class="char-select">
+        <div id="metal-knight"></div>
+        <div id="whispy-woods"></div>
+        <div id="king-dedede" class="hide-section"></div>
+      </div>
+
     </div>
     <div class="fight-scene">
-      <p>Solve this problem:</p>
       <div class="metal-knight-scene">
-        <p><span class="num1"></span> + <span class="num2"></span> = </p>
+        <p>Solve this problem:</p>
+        <p>
+          <span class="num1"></span>
+          <span class="operator">+</span>
+          <span class="num2"></span> =</p>
         <form>
-            <input type="text" name="submit" id="answer">
+          <input type="text" name="submit" id="answer">
         </form>
-        
+
       </div>
       <div>
         Windy Woods Scene

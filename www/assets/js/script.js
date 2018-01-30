@@ -23,6 +23,9 @@ let contentArena = document.querySelector(".content-arena");
 
 // Fight Scene
 let metalKnightScene = document.querySelector(".metal-knight-scene");
+
+let kirbyFight = document.querySelector(".kirby-fight");
+
 let num1 = document.querySelector(".num1");
 let num2 = document.querySelector(".num2");
 let answer = document.querySelector("#answer");
@@ -140,3 +143,11 @@ if (mainChar.sleep === true) {
     environment.days++;
 } */
 // ==============================================================
+
+function newNumbers() {
+  randomNum1 = Math.floor(Math.random() * 10 + 1);
+  randomNum2 = Math.floor(Math.random() * 10 + 1);
+  total = randomNum1 + randomNum2;
+  num1.textContent = randomNum1;
+  num2.textContent = randomNum2;
+}
