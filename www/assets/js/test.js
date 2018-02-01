@@ -1,5 +1,8 @@
 "use strict";
 
+let kirby = new Character("Kirby", 100, 20, 10);
+console.log(kirby);
+
 let startBtn = document.querySelector("#play");
 // Start Section
 let startPage = document.querySelector("#start-page");

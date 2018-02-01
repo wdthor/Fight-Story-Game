@@ -20,7 +20,6 @@ class Character {
     }
 
 
-
     isSleeping(days) {
         if (this.sleep === false) {
             this.sleep = true;
@@ -30,6 +29,37 @@ class Character {
     }
 
     attack(char2) {
+        if (this.isAlive) {
+            
+            char2.health -= this.strength;
+
+            if (char2.health <= 0) {
+                char2.health = 0;
+                char2.isDead();
+            }
+
+
+            return char2.health;
+        }
+        
+        return this.name + " is dead";
+
+    }
+
+    isDead() {
+        this.isAlive = false;
+    }
+
+    // sleep() {
+    //     this.action = 10;
+
+    // }
+}
+
+// TEST
+
+/*
+attack(char2) {
         if (this.isAlive && this.action > 0) {
             this.action--;
             char2.health -= this.strength;
@@ -52,13 +82,4 @@ class Character {
         return this.name + " is dead";
 
     }
-
-    isDead() {
-        this.isAlive = false;
-    }
-
-    // sleep() {
-    //     this.action = 10;
-
-    // }
-}
+*/
