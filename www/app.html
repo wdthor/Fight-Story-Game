@@ -11,10 +11,11 @@
 </head>
 
 <body>
-  Arena Section
+  <!-- Arena Section -->
   <section id="arena" class="">
     <div id="arena-background"></div>
 
+    <div id="game-over" class="hide-section"></div>
     <div class="content-arena">
       <div class="fighters hide-section">
         <div class="kirby-fight"></div>
@@ -28,24 +29,30 @@
       </div>
 
     </div>
-    <div class="fight-scene hide-section">
-      <div class="metal-knight-scene">
-        <p>Solve this problem:</p>
-        <p>
-          <span class="num1"></span>
-          <span class="operator">+</span>
-          <span class="num2"></span> =</p>
-        <form>
-          <input type="text" name="submit" id="answer">
-        </form>
+    <div class="fight-scene-container">
+      <div class="fight-scene">
+        <div class="kirby-side-fight">
+          Kirby
+        </div>
+        <div class="metal-knight-scene">
+          <p>Solve this problem:</p>
+          <p>
+            <span class="num1"></span>
+            <span class="operator">+</span>
+            <span class="num2"></span> =</p>
+          <form>
+            <input type="text" name="submit" id="answer">
+          </form>
 
+        </div>
+        <div>
+          Windy Woods Scene
+        </div>
+        <div>
+          King Dedede Scene
+        </div>
       </div>
-      <div>
-        Windy Woods Scene
-      </div>
-      <div>
-        King Dedede Scene
-      </div>
+
 
     </div>
   </section>

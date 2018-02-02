@@ -229,8 +229,9 @@ ul {
     margin: 0 5px;
 }
 
-.metal-knight-scene input {
-    
+.metal-knight-scene {
+    // display: flex;
+    // justify-content: center;
 }
 
 #king-dedede {
@@ -269,15 +270,25 @@ ul {
     cursor: pointer;
     opacity: 1;
 }
-.fight-scene {
+.fight-scene-container {
     position: absolute;
     top: 439px;
     left: 0;
     background-color: blue;
     height: 100px;
     width: 1041px;
-    border-top: 2px solid red;
-    
+    border-top: 2px solid red; 
+}
+
+#game-over {
+    background-image: url("../images/game_over2.gif");
+    background-size: 800px;
+    position: absolute;
+    left: 100px;
+    top: 0;
+    width: 800px;
+    height: 542px;
+    background-repeat: no-repeat;
 }
 // End Arena Page
 
