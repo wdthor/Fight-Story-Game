@@ -1,4 +1,8 @@
 "use strict";
+let kirby = new Character("Kirby", 100, 20, 10);
+console.log(kirby);
+let metalKnight = new Character("Metal Knight", 100, 20);
+console.log(metalKnight);
 
 let startBtn = document.querySelector("#play");
 // Start Section

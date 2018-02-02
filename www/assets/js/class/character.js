@@ -38,11 +38,10 @@ class Character {
                 char2.isDead();
             }
 
-
             return char2.health;
         }
-        
-        return this.name + " is dead";
+
+        return char2.name + " is dead";
 
     }
 
@@ -50,6 +49,9 @@ class Character {
         this.isAlive = false;
     }
 
+    doSth() {
+      this.action--;
+    }
     // sleep() {
     //     this.action = 10;
 
