@@ -32,7 +32,10 @@
     <div class="fight-scene-container">
       <div class="fight-scene">
         <div class="kirby-side-fight">
-          Kirby
+          <div class="progress-container">
+            <progress id="kirby-health" value="100" max="100"></progress>
+            <p>Kirby</p>
+          </div>
         </div>
         <div class="metal-knight-scene">
           <p>Solve this problem:</p>
@@ -43,12 +46,20 @@
           <form>
             <input type="text" name="submit" id="answer">
           </form>
+        </div>
+
+        <div class="knight-side-fight">
+          <div class="progress-container">
+            <progress value="100" max="100"></progress>
+            <p>Knight</p>
+          </div>
 
         </div>
-        <div>
+
+        <div class="hide-section">
           Windy Woods Scene
         </div>
-        <div>
+        <div class="hide-section">
           King Dedede Scene
         </div>
       </div>

@@ -193,6 +193,22 @@ ul {
   z-index: -3;
 }
 
+.fight-scene {
+  display: flex;
+  justify-content: space-around;
+}
+
+.progress-container {
+  display: flex;
+  flex-direction: column;
+  width: 170px;
+  align-items: flex-end;
+}
+
+.kirby-side-fight .progress-container {
+  align-items: flex-start;
+}
+
 #metal-knight {
   background-image: url("../images/foe.png");
   position: absolute;

@@ -5,6 +5,7 @@ console.log(kirby);
 let knight = new Character("Metal Knight", 100, 20);
 console.log(knight);
 
+let kirbyHealth = document.querySelector("#kirby-health");
 
 let startBtn = document.querySelector("#play");
 // Start Section
@@ -59,6 +60,7 @@ metalKnightChar.addEventListener("click", function () {
         newNumbers();
         kirbyFight.classList.add("kirby-anime");
         kirby.attack(knight);
+        kirbyHealth.value = kirby.health;
 
         document.addEventListener("animationend", function () {
           kirbyFight.classList.remove("kirby-anime");
@@ -67,7 +69,8 @@ metalKnightChar.addEventListener("click", function () {
         newNumbers();
         knightFight.classList.add("knight-anime");
         knight.attack(kirby);
-
+        kirbyHealth.value = kirby.health;
+        
         document.addEventListener("animationend", function () {
           knightFight.classList.remove("knight-anime");
         });
