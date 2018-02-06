@@ -6,6 +6,7 @@ let knight = new Character("Metal Knight", 100, 20);
 console.log(knight);
 
 let kirbyHealth = document.querySelector("#kirby-health");
+let knightHealth = document.querySelector("#knight-health");
 
 let startBtn = document.querySelector("#play");
 // Start Section
@@ -55,37 +56,44 @@ metalKnightChar.addEventListener("click", function () {
   charSelect.classList.add("hide-section");
   document.addEventListener("submit", function (event) {
     event.preventDefault();
-    if (kirby.isAlive && knight.isAlive) {
-      if (parseInt(answer.value) === total) {
-        newNumbers();
-        kirbyFight.classList.add("kirby-anime");
-        kirby.attack(knight);
-        kirbyHealth.value = kirby.health;
 
-        document.addEventListener("animationend", function () {
-          kirbyFight.classList.remove("kirby-anime");
-        });
-      } else if (parseInt(answer.value) < total || parseInt(answer.value) > total) {
-        newNumbers();
-        knightFight.classList.add("knight-anime");
-        knight.attack(kirby);
-        kirbyHealth.value = kirby.health;
-        
-        document.addEventListener("animationend", function () {
-          knightFight.classList.remove("knight-anime");
-        });
-      } else {
-        console.log("not a number");
-      }
-    } else if(!kirby.isAlive) {
-      endFightMode();
-      charSelect.classList.add("hide-section");
-      gameOver.classList.remove("hide-section");
-    } else if(!knight.isAlive) {
-      endFightMode();
-      console.log("knight is dead");
+    if (parseInt(answer.value) === total) {
+      newNumbers();
+      kirbyFight.classList.add("kirby-anime");
+      kirby.attack(knight);
+      knightHealth.value = knight.health;
+
+      document.addEventListener("animationend", function () {
+        kirbyFight.classList.remove("kirby-anime");
+      });
+    } else if (parseInt(answer.value) < total || parseInt(answer.value) > total) {
+      newNumbers();
+      knightFight.classList.add("knight-anime");
+      knight.attack(kirby);
+      kirbyHealth.value = kirby.health;
+
+      document.addEventListener("animationend", function () {
+        knightFight.classList.remove("knight-anime");
+      });
+    } else {
+      console.log("not a number");
     }
-
+    if (!kirby.isAlive || !knight.isAlive) {
+      window.setTimeout(function() {
+        if (!kirby.isAlive) {
+          endFightMode();
+          charSelect.classList.add("hide-section");
+          gameOver.classList.remove("hide-section");
+        } else if (!knight.isAlive) {
+      window.setTimeout(function() {
+        
+      })
+          endFightMode();
+          console.log("knight is dead");
+        }
+      },2000);
+      
+    }
   });
 });
 
