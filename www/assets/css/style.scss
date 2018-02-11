@@ -23,9 +23,9 @@ p {
     position: absolute;
     top: 0;
     left: 0;
-    background-size: 1041px 542px;
-    width: 100%;
-    height: 542px;
+    background-size: 1301px 673px;
+    width: 1301px;
+    height: 673px;
     z-index: $zIndex;
 }
 
@@ -123,8 +123,8 @@ ul {
 .kirby-fight {
     background-image: url("../sprites/kirby2.png");
     position: absolute;
-    top: 320px;
-    left: 360px;
+    top: 400px;
+    left: 495px;
     width: 70.45px;
     height: 46px;
     animation: 1.5s 1 steps(9);
@@ -142,13 +142,13 @@ ul {
         background-position-x: -634px;
    }
 }
-
-.knight-fight {
+// Knight
+.metal-knight-fight {
   background-image: url("../sprites/knight-attack.png");
     position: absolute;
     background-position-x: 158px;
-    top: 325px;
-    left: 500px;
+    top: 406px;
+    left: 600px;
     width: 158.5px;
     height: 58px;
     // 617 / 4 = 154.25
@@ -166,6 +166,45 @@ ul {
   }
   to {
        background-position-x: -463px;
+  }
+}
+
+.whispy-woods-body {
+    background-image: url("../sprites/tree-body3.png");
+    position: absolute;
+    // background-position-x: 158px;
+    top: 223px;
+    left: 505px;
+    width: 253px;
+    height: 256px;
+}
+
+.whispy-woods-fight {
+    background-image: url("../sprites/tree-face2.png");
+    position: absolute;
+    background-position-x: 50.8px;
+    top: 330px;
+    left: 670px;
+    width: 50.8px;
+    height: 85px;
+    // 295 / 6 = 49.16
+    // 254 / 5 = 50.8
+    // 617 / 4 = 154.25
+    animation: 2s 1 steps(6);
+    
+    // animation: translate 1.5s infinite;  
+}
+
+.whispy-woods-anime {
+    animation-name: whispy-woods-atk;
+}
+
+@keyframes whispy-woods-atk {
+  from {
+      background-position-x: -254px;
+  }
+  to {
+       background-position-x: 50.8px;
   }
 }
 
@@ -288,11 +327,11 @@ ul {
 }
 .fight-scene-container {
     position: absolute;
-    top: 439px;
+    top: 570px;
     left: 0;
     background-color: blue;
     height: 100px;
-    width: 1041px;
+    width: 1301px;
     border-top: 2px solid red; 
 }
 
@@ -305,6 +344,18 @@ ul {
     width: 800px;
     height: 542px;
     background-repeat: no-repeat;
+}
+
+.kirby-win {
+    background-image: url("../images/kirby_win.gif");
+    background-size: 400px;
+    position: absolute;
+    left: 260px;
+    top: 290px;
+    width: 400px;
+    height: 200px;
+    background-repeat: no-repeat;
+    // z-index: 
 }
 // End Arena Page
 

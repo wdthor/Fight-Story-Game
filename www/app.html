@@ -16,10 +16,19 @@
     <div id="arena-background"></div>
 
     <div id="game-over" class="hide-section"></div>
+    <div class="kirby-win hide-section"></div>
+    <audio id="win-song">
+      <source src="assets/music/min/win.mp3" type="audio/mpeg"> Your browser does not support the audio element.
+    </audio>
+    <audio id="game-over-song">
+      <source src="assets/music/min/game-over.mp3" type="audio/mpeg"> Your browser does not support the audio element.
+    </audio>
     <div class="content-arena">
       <div class="fighters hide-section">
         <div class="kirby-fight"></div>
-        <div class="knight-fight"></div>
+        <div class="metal-knight-fight hide-section"></div>
+        <div class="whispy-woods-body"></div>
+        <div class="whispy-woods-fight"></div>
       </div>
 
       <div class="char-select">
@@ -29,7 +38,7 @@
       </div>
 
     </div>
-    <div class="fight-scene-container">
+    <div class="fight-scene-container hide-section">
       <div class="fight-scene">
         <div class="kirby-side-fight">
           <div class="progress-container">
@@ -37,18 +46,25 @@
             <p>Kirby</p>
           </div>
         </div>
-        <div class="metal-knight-scene">
+        <div class="metal-knight-scene hide-section">
+          <!-- <== class="metal-knight-scene" -->
+
           <p>Solve this problem:</p>
           <p>
             <span class="num1"></span>
             <span class="operator">+</span>
-            <span class="num2"></span> =</p>
-          <form>
+            <span class="num2"></span> =
+          </p>
+          <form autocomplete="off">
             <input type="text" name="submit" id="answer">
           </form>
         </div>
 
-        <div class="knight-side-fight">
+        <div class="whispy-woods-scene hide-section">
+          Whispy Woods Scene
+        </div>
+
+        <div class="metal-knight-side-fight hide-section">
           <div class="progress-container">
             <progress id="knight-health" value="100" max="100"></progress>
             <p>Knight</p>
@@ -56,9 +72,7 @@
 
         </div>
 
-        <div class="hide-section">
-          Windy Woods Scene
-        </div>
+
         <div class="hide-section">
           King Dedede Scene
         </div>
