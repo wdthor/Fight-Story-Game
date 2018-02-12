@@ -14,7 +14,7 @@ p {
 }
 
 .hide-section {
-  display: none;
+  display: none !important;
 }
 
 .king-dedede {
@@ -170,7 +170,7 @@ ul {
   height: 256px;
 }
 
-.whispy-woods-fight {
+.whispy-woods-face {
   background-image: url("../sprites/tree-face2.png");
   position: absolute;
   background-position-x: 50.8px;
@@ -192,6 +192,18 @@ ul {
   to {
     background-position-x: 50.8px;
   }
+}
+
+.whispy-code-container {
+  position: absolute;
+  height: 571px;
+  width: 300px;
+  background-color: blue;
+}
+
+.whispy-code {
+  padding: 0 20px;
+  font-size: 1.4em;
 }
 
 #house #house-background {

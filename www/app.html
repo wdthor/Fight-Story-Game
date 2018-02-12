@@ -24,11 +24,24 @@
       <source src="assets/music/min/game-over.mp3" type="audio/mpeg"> Your browser does not support the audio element.
     </audio>
     <div class="content-arena">
+      <div class="whispy-code-container">
+        <pre class="whispy-code">
+          <code>
+let x = 1;
+let y = 2;
+let z = 3;
+x = y;
+
+          </code>
+        </pre>
+      </div>
       <div class="fighters hide-section">
         <div class="kirby-fight"></div>
         <div class="metal-knight-fight hide-section"></div>
-        <div class="whispy-woods-body"></div>
-        <div class="whispy-woods-fight"></div>
+        <div class="whispy-woods-tree hide-section">
+          <div class="whispy-woods-body"></div>
+          <div class="whispy-woods-face"></div>
+        </div>
       </div>
 
       <div class="char-select">
@@ -61,7 +74,11 @@
         </div>
 
         <div class="whispy-woods-scene hide-section">
-          Whispy Woods Scene
+          <p>Trouve x:</p>
+          <form autocomplete="off">
+            <input type="text" name="submit" id="answer">
+          </form>
+
         </div>
 
         <div class="metal-knight-side-fight hide-section">
@@ -69,7 +86,13 @@
             <progress id="knight-health" value="100" max="100"></progress>
             <p>Knight</p>
           </div>
+        </div>
 
+        <div class="whispy-woods-side-fight hide-section">
+          <div class="progress-container">
+            <progress id="whispy-health" value="100" max="100"></progress>
+            <p>Whispy Woods</p>
+          </div>
         </div>
 
 
