@@ -206,6 +206,26 @@ ul {
   font-size: 1.4em;
 }
 
+.dedede-fight {
+  background-image: url("../sprites/dedede-attack3.png");
+  position: absolute;
+  top: 345px;
+  left: 700px;
+  width: 99px;
+  height: 105px;
+  animation: 1.3s infinite steps(5);
+  animation-name: dedede-atk;
+}
+
+@keyframes dedede-atk {
+  from {
+    background-position-x: 0px;
+  }
+  to {
+    background-position-x: -495px;
+  }
+}
+
 #house #house-background {
   background-image: url("../images/kirby_house.png");
   background-repeat: no-repeat;
@@ -273,12 +293,12 @@ ul {
   opacity: 1;
 }
 
-.metal-knight-scene {
+.metal-knight-scene, .whispy-woods-scene {
   display: flex;
   margin: 5px;
 }
 
-.metal-knight-scene p {
+.metal-knight-scene p, .whispy-woods-scene p {
   margin: 0 5px;
 }
 
@@ -341,8 +361,30 @@ ul {
   background-repeat: no-repeat;
 }
 
-.kirby-win {
+.win1 {
   background-image: url("../images/kirby_win.gif");
+  background-size: 400px;
+  position: absolute;
+  left: 260px;
+  top: 290px;
+  width: 400px;
+  height: 200px;
+  background-repeat: no-repeat;
+}
+
+.win2 {
+  background-image: url("../images/kirby_win2.gif");
+  background-size: 400px;
+  position: absolute;
+  left: 260px;
+  top: 290px;
+  width: 400px;
+  height: 200px;
+  background-repeat: no-repeat;
+}
+
+.win3 {
+  background-image: url("../images/kirby_win3.gif");
   background-size: 400px;
   position: absolute;
   left: 260px;

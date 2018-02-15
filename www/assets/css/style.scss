@@ -169,6 +169,7 @@ ul {
   }
 }
 
+// Whispy Woods
 .whispy-woods-body {
     background-image: url("../sprites/tree-body3.png");
     position: absolute;
@@ -219,6 +220,29 @@ ul {
     padding: 0 20px;
     font-size: 1.4em;
 }
+
+// King Dedede
+
+.dedede-fight {
+    background-image: url("../sprites/dedede-attack3.png");
+    position: absolute;
+    top: 345px;
+    left: 700px;
+    width: 99px;
+    height: 105px;
+    // 495 / 5 = 
+    animation: 1.3s infinite steps(5);
+    animation-name: dedede-atk;
+}
+
+@keyframes dedede-atk {
+    from {
+        background-position-x: 0px;
+    }
+    to {
+         background-position-x: -495px;
+    }
+  }
 
 // TEST
 
@@ -287,19 +311,15 @@ ul {
     opacity: 1;
 }
 
-.metal-knight-scene {
+.metal-knight-scene, .whispy-woods-scene {
     display: flex;
     margin: 5px;
 }
 
-.metal-knight-scene p {
+.metal-knight-scene p, .whispy-woods-scene p {
     margin: 0 5px;
 }
 
-.metal-knight-scene {
-    // display: flex;
-    // justify-content: center;
-}
 
 #king-dedede {
     background-image: url("../images/king-dedede.png");
@@ -358,8 +378,8 @@ ul {
     background-repeat: no-repeat;
 }
 
-.kirby-win {
-    background-image: url("../images/kirby_win.gif");
+@mixin win($gifUrl) {
+    background-image: url($gifUrl);
     background-size: 400px;
     position: absolute;
     left: 260px;
@@ -367,7 +387,18 @@ ul {
     width: 400px;
     height: 200px;
     background-repeat: no-repeat;
-    // z-index: 
+}
+
+.win1 {
+    @include win("../images/kirby_win.gif");
+}
+
+.win2 {
+    @include win("../images/kirby_win2.gif");
+}
+
+.win3 {
+    @include win("../images/kirby_win3.gif");
 }
 // End Arena Page
 

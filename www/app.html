@@ -16,21 +16,24 @@
     <div id="arena-background"></div>
 
     <div id="game-over" class="hide-section"></div>
-    <div class="kirby-win hide-section"></div>
+
+    <div class="win1 hide-section"></div>
+    <div class="win2 hide-section"></div>
+    <div class="win3 hide-section"></div>
+
     <audio id="win-song">
       <source src="assets/music/min/win.mp3" type="audio/mpeg"> Your browser does not support the audio element.
     </audio>
     <audio id="game-over-song">
       <source src="assets/music/min/game-over.mp3" type="audio/mpeg"> Your browser does not support the audio element.
     </audio>
+
+    
+
     <div class="content-arena">
-      <div class="whispy-code-container">
+      <div class="whispy-code-container hide-section">
         <pre class="whispy-code">
-          <code>
-let x = 1;
-let y = 2;
-let z = 3;
-x = y;
+          <code class="code-game">
 
           </code>
         </pre>
@@ -42,6 +45,7 @@ x = y;
           <div class="whispy-woods-body"></div>
           <div class="whispy-woods-face"></div>
         </div>
+        <div class="dedede-fight hide-section"></div>
       </div>
 
       <div class="char-select">
@@ -76,7 +80,7 @@ x = y;
         <div class="whispy-woods-scene hide-section">
           <p>Trouve x:</p>
           <form autocomplete="off">
-            <input type="text" name="submit" id="answer">
+            <input type="text" name="submit2" id="answer2">
           </form>
 
         </div>
@@ -90,11 +94,10 @@ x = y;
 
         <div class="whispy-woods-side-fight hide-section">
           <div class="progress-container">
-            <progress id="whispy-health" value="100" max="100"></progress>
+            <progress id="whispy-woods-health" value="100" max="100"></progress>
             <p>Whispy Woods</p>
           </div>
         </div>
-
 
         <div class="hide-section">
           King Dedede Scene
