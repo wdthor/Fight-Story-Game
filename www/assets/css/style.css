@@ -121,7 +121,7 @@ ul {
   left: 495px;
   width: 70.45px;
   height: 46px;
-  animation: 1.5s 1 steps(9);
+  animation: 1.3s 1 steps(9);
 }
 
 .kirby-anime {
@@ -213,7 +213,10 @@ ul {
   left: 700px;
   width: 99px;
   height: 105px;
-  animation: 1.3s infinite steps(5);
+  animation: 0.8s 1 steps(5);
+}
+
+.dedede-anime {
   animation-name: dedede-atk;
 }
 
@@ -302,7 +305,7 @@ ul {
   margin: 0 5px;
 }
 
-#king-dedede {
+#dedede {
   background-image: url("../images/king-dedede.png");
   background-size: 100%;
   background-position: center;
@@ -316,7 +319,7 @@ ul {
   opacity: 0.95;
 }
 
-#king-dedede:hover {
+#dedede:hover {
   cursor: pointer;
   opacity: 1;
 }

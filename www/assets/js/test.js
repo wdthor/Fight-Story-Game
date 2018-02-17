@@ -5,11 +5,12 @@ console.log(kirby);
 let knight = new Character("Metal Knight", 100, 20);
 console.log(knight);
 let whispyWoods = new Character("Whispy Woods", 100, 20);
-let kingDedede = new Character("King Dedede", 100, 20);
+let dedede = new Character("King Dedede", 100, 20);
 
 let kirbyHealth = document.querySelector("#kirby-health");
 let metalKnightHealth = document.querySelector("#knight-health");
 let whispyWoodsHealth = document.querySelector("#whispy-woods-health");
+let dededeHealth = document.querySelector("#dedede-health");
 
 // Songs
 let kirbyWinSong = document.querySelector("#win-song");
@@ -52,6 +53,11 @@ let whispyWoodsFace = document.querySelector(".whispy-woods-face");
 let whispyWoodsSideFight = document.querySelector(".whispy-woods-side-fight");
 let whispyWoodsCodeContainer = document.querySelector(".whispy-code-container");
 
+// King Dedede Fight
+let dededeScene = document.querySelector(".dedede-scene");
+let dededeChar = document.querySelector("#dedede");
+let dededeSideFight = document.querySelector(".dedede-side-fight");
+let dededeFight = document.querySelector(".dedede-fight");
 
 
 let codeGame = document.querySelector('.code-game');
@@ -87,15 +93,12 @@ num1.textContent = randomNum1;
 num2.textContent = randomNum2;
 
 // Metal Knight Scene
-if(knight.isAlive) {
-  metalKnightChar.addEventListener("click", fightWithKnight);
-}
+metalKnightChar.addEventListener("click", fightWithKnight);
 
 // Whispy Woods Scene
-if(whispyWoods.isAlive){
-  whispyWoodsChar.addEventListener("click", fightWithWhispyWoods);
+whispyWoodsChar.addEventListener("click", fightWithWhispyWoods);
 
-}
+dededeChar.addEventListener("click", fightWithDedede);
 
 
 // FUNCTIONS
@@ -124,18 +127,17 @@ function newNumbers() {
   num2.textContent = randomNum2;
 }
 
-// Futur Edit
+// FUTURE FEATURE
+// Will allow to fight again
 /* 
 function resetStats(character) {
   character.health = 100;
   character.isAlive = true;
   answer.value = "";
 } */
-
-// TEST
+// END FUTURE FEATURE
 
 function fightWithKnight() {
-  
   kirby.doSth();
   fightMode();
   metalKnightScene.classList.remove("hide-section");
@@ -144,7 +146,7 @@ function fightWithKnight() {
   metalKnightFight.classList.remove("hide-section");
   document.addEventListener("submit", function (event) {
     event.preventDefault();
-    if(!knight.isAlive) {
+    if (!knight.isAlive) {
       return "dead";
     }
     if (parseInt(answer.value) === total) {
@@ -181,7 +183,7 @@ function fightWithKnight() {
           kirbyLoseSong.play();
         } else if (!knight.isAlive) {
           window.setTimeout(function () {
-            if(!knight.isAlive && !whispyWoods.isAlive) {
+            if (!knight.isAlive && !whispyWoods.isAlive) {
 
             }
             charSelect.classList.remove("hide-section");
@@ -207,12 +209,12 @@ function fightWithWhispyWoods() {
   charSelect.classList.add("hide-section");
   whispyWoodsSideFight.classList.remove("hide-section");
   whispyWoodsTree.classList.remove("hide-section");
-  whispyWoodsCodeContainer.classList.remove("hide-section");  
+  whispyWoodsCodeContainer.classList.remove("hide-section");
   codeGame.innerHTML = codeArray[i];
 
   document.addEventListener("submit", function (event) {
     event.preventDefault();
-    if(!whispyWoods.isAlive) {
+    if (!whispyWoods.isAlive) {
       return "dead";
     }
     if (parseInt(answer2.value) === answerArray[i]) {
@@ -221,7 +223,7 @@ function fightWithWhispyWoods() {
       kirby.attack(whispyWoods);
       whispyWoodsHealth.value = whispyWoods.health;
       i++;
-      if(i >= 5) {
+      if (i >= 5) {
         whispyWoodsCodeContainer.classList.add("hide-section");
       }
       codeGame.innerHTML = codeArray[i];
@@ -268,4 +270,69 @@ function fightWithWhispyWoods() {
   });
 
   whispyWoodsChar.removeEventListener('click', fightWithWhispyWoods);
+}
+
+function fightWithDedede() {
+  if (!dedede.isAlive) {
+    return "dead";
+  }
+  kirby.doSth();
+  fightMode();
+  dededeScene.classList.remove("hide-section");
+  charSelect.classList.add("hide-section");
+  dededeSideFight.classList.remove("hide-section");
+  dededeFight.classList.remove("hide-section");
+
+  kirbyFight.classList.add("kirby-anime");
+
+  dededeFight.classList.add("dedede-anime");
+  dedede.attack(kirby);
+
+  kirbyHealth.value = kirby.health;
+
+  let keyNum = 0;
+
+  document.addEventListener("keyup", function (event) {
+
+    if (event.keyCode === 13) {
+      keyNum++;
+      dededeHealth.value--
+      dedede.health = dededeHealth.value;
+
+      if(dedede.health === 0) {
+        dedede.isAlive = false;
+      }
+
+      if (!kirby.isAlive || !dedede.isAlive) {
+        window.setTimeout(function () {
+          if (!kirby.isAlive) {
+            endFightMode();
+            charSelect.classList.add("hide-section");
+            gameOver.classList.remove("hide-section");
+            kirbyLoseSong.play();
+          } else if (!dedede.isAlive) {
+            window.setTimeout(function () {
+              charSelect.classList.remove("hide-section");
+              win1.classList.add("hide-section");
+              return "dedede is dead";
+            }, 7000);
+            endFightMode(dededeChar, dededeScene, dededeSideFight, dededeFight);
+            win1.classList.remove("hide-section");
+            kirbyWinSong.play();
+          }
+        }, 2000);
+
+      }
+    }
+  });
+
+  document.addEventListener("submit", function (event) {
+    event.preventDefault();
+    if (!dedede.isAlive) {
+      return "dead";
+    }
+
+  });
+
+  dededeChar.removeEventListener('click', fightWithDedede);
 }
