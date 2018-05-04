@@ -171,14 +171,14 @@ ul {
 }
 
 .whispy-woods-face {
-  background-image: url("../sprites/tree-face2.png");
+  background-image: url("../sprites/tree-face5.png");
   position: absolute;
-  background-position-x: 50.8px;
+  background-position-x: 66px;
   top: 330px;
   left: 670px;
-  width: 50.8px;
+  width: 50px;
   height: 85px;
-  animation: 2s 1 steps(6);
+  animation: 1.1s 1 steps(5);
 }
 
 .whispy-woods-anime {
@@ -187,10 +187,10 @@ ul {
 
 @keyframes whispy-woods-atk {
   from {
-    background-position-x: -254px;
+    background-position-x: 0px;
   }
   to {
-    background-position-x: 50.8px;
+    background-position-x: -254px;
   }
 }
 
