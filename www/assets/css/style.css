@@ -197,8 +197,9 @@ ul {
 .whispy-code-container {
   position: absolute;
   height: 571px;
-  width: 300px;
-  background-color: blue;
+  min-width: 300px;
+  background-color: teal;
+
 }
 
 .whispy-code {
@@ -347,7 +348,7 @@ ul {
   position: absolute;
   top: 570px;
   left: 0;
-  background-color: blue;
+  background-color: teal;
   height: 100px;
   width: 1301px;
   border-top: 2px solid red;
